@@ -4,9 +4,10 @@ import MainLayouts from "../layouts/MainLayouts";
 import About from "../pages/About/About";
 import Services from "../pages/Services/Services";
 import Contact from "../pages/Contact/Contact";
-import Profile from "../pages/Profile/Profile";
 import Login from "../pages/User/Login/Login";
 import Register from "../pages/User/Register/Register";
+import PrivateRoutes from "./PrivateRoutes";
+import UserProfile from "../pages/Profile/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -18,20 +19,24 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "about",
+        path: "/about",
         element: <About></About>,
       },
       {
-        path: "services",
+        path: "/services",
         element: <Services></Services>,
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <Contact></Contact>,
       },
       {
-        path: "profile",
-        element: <Profile></Profile>,
+        path: "/profile",
+        element: (
+          <PrivateRoutes>
+            <UserProfile></UserProfile>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "login",

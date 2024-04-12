@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import SocialLogin from "./SocialLogin";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
   const [loginSuccess, setLoginSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,8 +20,10 @@ const Login = () => {
     setLoginError("");
     setLoginSuccess("");
 
-    if (password.length < 6) {
-      setLoginError("Password should be at least 6 characters or longer.");
+    if (!/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{6,}$/.test(password)) {
+      setLoginError(
+        "Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter character."
+      );
       return;
     }
 
@@ -27,10 +31,12 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         setLoginSuccess("Successfully login");
+        e.target.reset();
+        navigate("/");
       })
       .then((error) => {
         console.log(error);
-        setLoginError(error.message);
+        // setLoginError(error.message);
       });
   };
 
@@ -72,12 +78,7 @@ const Login = () => {
                 </p>
               </div>
               <div className="form-control mt-3">
-                <button className="btn btn-primary">Login</button>
-                <p className="text-center my-3">or</p>
-                <button className="btn btn-outline mb-3">
-                  Login with Google
-                </button>
-                <button className="btn btn-primary">Login with Facebook</button>
+                <SocialLogin />
               </div>
             </form>
             <label className="label">

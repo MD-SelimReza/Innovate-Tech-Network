@@ -1,15 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [logOutMessage, setLogOutMessage] = useState(false);
 
   const handleLogOut = () => {
-    logOut()
-      .then(console.log("login success"))
-      .catch(console.log("login failed"));
+    logOut().then(() => setLogOutMessage(true));
   };
+
+  if (logOutMessage) {
+    alert("LogOut Successfully");
+  }
 
   const navLinks = (
     <>
@@ -45,14 +48,18 @@ const Navbar = () => {
       >
         Contact Us
       </NavLink>
-      <NavLink
-        to="profile"
-        className={({ isActive }) =>
-          isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
-        }
-      >
-        My Profile
-      </NavLink>
+      {user && (
+        <>
+          <NavLink
+            to="profile"
+            className={({ isActive }) =>
+              isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
+            }
+          >
+            User Profile
+          </NavLink>
+        </>
+      )}
     </>
   );
   return (
@@ -92,33 +99,21 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-4">
-        <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar"
+        >
+          <div className="w-10 rounded-full">
+            {user?.photoURL ? (
+              <img src={user.photoURL} />
+            ) : (
               <img
                 alt="Tailwind CSS Navbar component"
                 src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
               />
-            </div>
+            )}
           </div>
-          <ul
-            tabIndex={0}
-            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-32"
-          >
-            <li>
-              <a className="justify-between">Profile</a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
         </div>
         {user ? (
           <NavLink

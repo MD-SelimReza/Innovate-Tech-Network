@@ -16,7 +16,6 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const photo = form.get("photo");
-    console.log(name, email, password, photo);
 
     setRegisterError("");
     setRegisterSuccess("");
@@ -28,13 +27,13 @@ const Register = () => {
       return;
     }
 
-    createUser(email, password)
+    createUser(email, password, name, photo)
       .then((result) => {
         console.log(result.user);
         setRegisterSuccess("User created successfully.");
+        e.target.reset();
       })
       .catch((error) => {
-        console.error(error);
         setRegisterError(error.message);
       });
   };
