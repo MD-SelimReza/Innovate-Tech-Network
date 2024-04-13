@@ -5,6 +5,10 @@ import { AuthContext } from "../../../providers/AuthProviders";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [logOutMessage, setLogOutMessage] = useState(false);
+  // const [userName, setUserName] = useState("");
+  // {
+  //   setUserName(user.displayName ? user.displayName : "Unknown")
+  // }
 
   const handleLogOut = () => {
     logOut().then(() => setLogOutMessage(true));
@@ -106,7 +110,10 @@ const Navbar = () => {
         >
           <div className="w-10 rounded-full">
             {user?.photoURL ? (
-              <img src={user.photoURL} />
+              <img
+                title={user.displayName ? user.displayName : "Unknown"}
+                src={user.photoURL}
+              />
             ) : (
               <img
                 alt="Tailwind CSS Navbar component"

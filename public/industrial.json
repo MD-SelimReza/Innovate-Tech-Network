@@ -2,7 +2,7 @@
   {
     "id": 1,
     "estate_title": "Spacious Warehouse",
-    "segment_name": "Warehouse",
+    "segment_name": "https://i.ibb.co/1ZBRksW/img-5.jpg",
     "description": "A large warehouse suitable for storage and distribution purposes.",
     "price": "$5000/month",
     "status": "rent",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "estate_title": "Modern Factory",
-    "segment_name": "Factory",
+    "segment_name": "https://i.ibb.co/vqSzx5w/img-12.jpg",
     "description": "State-of-the-art factory equipped with advanced machinery.",
     "price": "$1,000,000",
     "status": "sale",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "estate_title": "Industrial Park Complex",
-    "segment_name": "Industrial Park",
+    "segment_name": "https://i.ibb.co/txgKqcg/img-14.jpg",
     "description": "A comprehensive industrial park offering various facilities and services.",
     "price": "$2000/month",
     "status": "rent",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "estate_title": "Cold Storage Facility",
-    "segment_name": "Cold Storage",
+    "segment_name": "https://i.ibb.co/ZhHY34w/img-18.jpg",
     "description": "Specialized cold storage facility suitable for perishable goods.",
     "price": "$10,000/month",
     "status": "rent",
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "estate_title": "Heavy Machinery Production Plant",
-    "segment_name": "Production Plant",
+    "segment_name": "https://i.ibb.co/7bqsV5D/img-21.jpg",
     "description": "A facility specialized in manufacturing heavy machinery.",
     "price": "$3,000,000",
     "status": "sale",
@@ -70,7 +70,7 @@
   {
     "id": 6,
     "estate_title": "Power Plant Complex",
-    "segment_name": "Power Plant",
+    "segment_name": "https://i.ibb.co/z5tJfCP/img-1.jpg",
     "description": "An industrial facility dedicated to generating electricity.",
     "price": "$15,000,000",
     "status": "sale",
@@ -82,7 +82,7 @@
   {
     "id": 7,
     "estate_title": "Industrial Office Building",
-    "segment_name": "Industrial Office",
+    "segment_name": "https://i.ibb.co/zHgk9rs/img-16.jpg",
     "description": "Office space within an industrial complex.",
     "price": "$3000/month",
     "status": "rent",
@@ -94,7 +94,7 @@
   {
     "id": 8,
     "estate_title": "Advanced Robotics Facility",
-    "segment_name": "Robotics Facility",
+    "segment_name": "https://i.ibb.co/ZYmwkwh/img-17.jpg",
     "description": "Specialized facility for research and development in robotics.",
     "price": "$7,500/month",
     "status": "rent",
@@ -106,7 +106,7 @@
   {
     "id": 9,
     "estate_title": "Industrial Distribution Center",
-    "segment_name": "Distribution Center",
+    "segment_name": "https://i.ibb.co/2SMncgR/img-9.jpg",
     "description": "A central hub for distributing goods to various locations.",
     "price": "$12,000/month",
     "status": "rent",
