@@ -1,36 +1,23 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css/navigation";
-import Banner1 from "./Banner1";
-import Banner2 from "./Banner2";
-import Banner3 from "./Banner3";
+import BannerSlide from "./BannerSlide";
+import Estate from "./Estate";
+import Support from "./Support";
+import Welcome from "./Welcome";
 
 const Home = () => {
   return (
     <div>
-      <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination, Navigation, Autoplay]}
-        navigation={true}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-      >
-        <SwiperSlide>
-          <Banner1 />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Banner2 />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Banner3 />
-        </SwiperSlide>
-      </Swiper>
+      <div>
+        <BannerSlide />
+      </div>
+      <div>
+        <Welcome />
+      </div>
+      <div>
+        <Estate />
+      </div>
+      <div className="my-20 px-5">
+        <Support />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 p-10 text-base-content bg-[#050709]">
@@ -10,6 +12,20 @@ const Footer = () => {
           majority have suffered alteration in some form.
         </p>
         <p className="footer-title text-[#FFFFFF] opacity-100">Follow Us</p>
+        <div className="flex gap-5">
+          <p className="rounded-full p-2 bg-[#1877F2] text-white hover:text-[#1877F2] hover:bg-white">
+            <FaFacebookF className="" />
+          </p>
+          <p className="rounded-full p-2 bg-[#FF0000] text-white hover:text-[#FF0000] hover:bg-white">
+            <FaYoutube className="" />
+          </p>
+          <p className="rounded-full p-2 bg-[#cd486b] text-white hover:text-[#cd486b] hover:bg-white">
+            <FaInstagram className="" />
+          </p>
+          <p className="rounded-full p-2 bg-[#1DA1F2] text-white hover:text-[#1DA1F2] hover:bg-white">
+            <FaXTwitter className="" />
+          </p>
+        </div>
       </nav>
       <nav className="flex flex-col gap-5 md:col-span-2 lg:col-span-1">
         <h6 className="footer-title text-[#FFFFFF] opacity-100">

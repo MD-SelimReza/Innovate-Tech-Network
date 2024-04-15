@@ -29,7 +29,7 @@ const Navbar = () => {
         Home
       </NavLink>
       <NavLink
-        to="about"
+        to="/about"
         className={({ isActive }) =>
           isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
         }
@@ -37,7 +37,15 @@ const Navbar = () => {
         About Us
       </NavLink>
       <NavLink
-        to="services"
+        to="/estate"
+        className={({ isActive }) =>
+          isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
+        }
+      >
+        Estate Details
+      </NavLink>
+      <NavLink
+        to="/services"
         className={({ isActive }) =>
           isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
         }
@@ -45,7 +53,7 @@ const Navbar = () => {
         Our Services
       </NavLink>
       <NavLink
-        to="contact"
+        to="/contact"
         className={({ isActive }) =>
           isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
         }
@@ -55,7 +63,7 @@ const Navbar = () => {
       {user && (
         <>
           <NavLink
-            to="profile"
+            to="/profile"
             className={({ isActive }) =>
               isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
             }

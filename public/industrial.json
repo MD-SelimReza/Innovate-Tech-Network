@@ -2,45 +2,45 @@
   {
     "id": 1,
     "estate_title": "Spacious Warehouse",
-    "segment_name": "https://i.ibb.co/1ZBRksW/img-5.jpg",
+    "segment_name": "Warehouse",
     "description": "A large warehouse suitable for storage and distribution purposes.",
-    "price": "$5000/month",
+    "price": "$ 5000/month",
     "status": "rent",
     "area": "5000 sq ft",
     "location": "Industrial Zone A",
     "facilities": ["loading bay", "office space", "security system"],
-    "image": "warehouse_image_url"
+    "image": "https://i.ibb.co/1ZBRksW/img-5.jpg"
   },
   {
     "id": 2,
     "estate_title": "Modern Factory",
-    "segment_name": "https://i.ibb.co/vqSzx5w/img-12.jpg",
+    "segment_name": "Factory",
     "description": "State-of-the-art factory equipped with advanced machinery.",
-    "price": "$1,000,000",
+    "price": "$ 1,000,000",
     "status": "sale",
     "area": "10000 sq ft",
     "location": "Industrial Zone B",
     "facilities": ["production floor", "warehouse space", "office area"],
-    "image": "factory_image_url"
+    "image": "https://i.ibb.co/vqSzx5w/img-12.jpg"
   },
   {
     "id": 3,
     "estate_title": "Industrial Park Complex",
-    "segment_name": "https://i.ibb.co/txgKqcg/img-14.jpg",
+    "segment_name": "Industrial Park",
     "description": "A comprehensive industrial park offering various facilities and services.",
-    "price": "$2000/month",
+    "price": "$ 2000/month",
     "status": "rent",
     "area": "20000 sq ft",
     "location": "Industrial Zone C",
     "facilities": ["security services", "common amenities", "ample parking"],
-    "image": "industrial_park_image_url"
+    "image": "https://i.ibb.co/txgKqcg/img-14.jpg"
   },
   {
     "id": 4,
     "estate_title": "Cold Storage Facility",
-    "segment_name": "https://i.ibb.co/ZhHY34w/img-18.jpg",
+    "segment_name": "Cold Storage",
     "description": "Specialized cold storage facility suitable for perishable goods.",
-    "price": "$10,000/month",
+    "price": "$ 10,000/month",
     "status": "rent",
     "area": "8000 sq ft",
     "location": "Industrial Zone D",
@@ -49,14 +49,14 @@
       "loading docks",
       "freezer rooms"
     ],
-    "image": "cold_storage_image_url"
+    "image": "https://i.ibb.co/ZhHY34w/img-18.jpg"
   },
   {
     "id": 5,
     "estate_title": "Heavy Machinery Production Plant",
-    "segment_name": "https://i.ibb.co/7bqsV5D/img-21.jpg",
+    "segment_name": "Production Plant",
     "description": "A facility specialized in manufacturing heavy machinery.",
-    "price": "$3,000,000",
+    "price": "$ 3,000,000",
     "status": "sale",
     "area": "15000 sq ft",
     "location": "Industrial Zone E",
@@ -65,54 +65,54 @@
       "quality control department",
       "storage area"
     ],
-    "image": "production_plant_image_url"
+    "image": "https://i.ibb.co/7bqsV5D/img-21.jpg"
   },
   {
     "id": 6,
     "estate_title": "Power Plant Complex",
-    "segment_name": "https://i.ibb.co/z5tJfCP/img-1.jpg",
+    "segment_name": "Power Plant",
     "description": "An industrial facility dedicated to generating electricity.",
-    "price": "$15,000,000",
+    "price": "$ 15,000,000",
     "status": "sale",
     "area": "50000 sq ft",
     "location": "Industrial Zone F",
     "facilities": ["turbine generators", "control room", "fuel storage"],
-    "image": "power_plant_image_url"
+    "image": "https://i.ibb.co/z5tJfCP/img-1.jpg"
   },
   {
     "id": 7,
     "estate_title": "Industrial Office Building",
-    "segment_name": "https://i.ibb.co/zHgk9rs/img-16.jpg",
+    "segment_name": "Industrial Office",
     "description": "Office space within an industrial complex.",
-    "price": "$3000/month",
+    "price": "$ 3000/month",
     "status": "rent",
     "area": "3000 sq ft",
     "location": "Industrial Zone G",
     "facilities": ["meeting rooms", "reception area", "parking"],
-    "image": "industrial_office_image_url"
+    "image": "https://i.ibb.co/zHgk9rs/img-16.jpg"
   },
   {
     "id": 8,
     "estate_title": "Advanced Robotics Facility",
-    "segment_name": "https://i.ibb.co/ZYmwkwh/img-17.jpg",
+    "segment_name": "Robotics Facility",
     "description": "Specialized facility for research and development in robotics.",
-    "price": "$7,500/month",
+    "price": "$ 7,500/month",
     "status": "rent",
     "area": "6000 sq ft",
     "location": "Industrial Zone H",
     "facilities": ["laboratories", "workshop space", "office area"],
-    "image": "robotics_facility_image_url"
+    "image": "https://i.ibb.co/ZYmwkwh/img-17.jpg"
   },
   {
     "id": 9,
     "estate_title": "Industrial Distribution Center",
-    "segment_name": "https://i.ibb.co/2SMncgR/img-9.jpg",
+    "segment_name": "Distribution Center",
     "description": "A central hub for distributing goods to various locations.",
-    "price": "$12,000/month",
+    "price": "$ 12,000/month",
     "status": "rent",
     "area": "10000 sq ft",
     "location": "Industrial Zone I",
     "facilities": ["loading docks", "storage racks", "dispatch area"],
-    "image": "distribution_center_image_url"
+    "image": "https://i.ibb.co/2SMncgR/img-9.jpg"
   }
 ]
