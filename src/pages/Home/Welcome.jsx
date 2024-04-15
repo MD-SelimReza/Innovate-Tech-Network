@@ -1,7 +1,7 @@
 const Welcome = () => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-10 my-20 px-5">
-      <div className="lg:row-span-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-10 my-20 px-5">
+      <div className="lg:row-span-2 md:col-span-2 lg:col-span-1">
         <h1 className="text-3xl font-bold mb-8" data-aos="fade-down-right">
           Welcome to InnovateTechNetwork
         </h1>
@@ -23,7 +23,9 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]">Read more</button>
+        <button className="text-[#FC8902]" data-aos="fade-down-right">
+          Read more
+        </button>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -33,7 +35,9 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]">Read more</button>
+        <button className="text-[#FC8902]" data-aos="fade-down-right">
+          Read more
+        </button>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -43,7 +47,9 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]">Read more</button>
+        <button className="text-[#FC8902]" data-aos="fade-down-right">
+          Read more
+        </button>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -53,7 +59,9 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]">Read more</button>
+        <button className="text-[#FC8902]" data-aos="fade-down-right">
+          Read more
+        </button>
       </div>
     </div>
   );
