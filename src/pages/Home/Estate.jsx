@@ -61,14 +61,14 @@ const Estate = () => {
           </div>
         ))}
       </div>
-      <div className="text-center">
+      {/* <div className="text-center">
         <button
           className="mt-10 bg-[#FC8902] text-white px-8 py-3 rounded-md"
           data-aos="zoom-in-up"
         >
           View All Properties
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

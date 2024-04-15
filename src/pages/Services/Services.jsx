@@ -11,8 +11,8 @@ const Services = () => {
   console.log(industrial);
   return (
     <div className="text-black bg-white px-5 py-20">
-      <div className="grid grid-cols-3 gap-10">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="md:col-span-2">
           <div>
             <h1
               className="text-2xl font-bold mb-5 text-center"
@@ -38,11 +38,7 @@ const Services = () => {
             </button>
           </div>
         </div>
-        <div
-          className="bg-[#FC8902] text-white p-6 rounded-lg"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <div className="bg-[#FC8902] text-white lg:order-none md:order-last p-6 rounded-lg">
           <h1 className="text-3xl mb-5" data-aos="fade-left">
             Do You Need Any Help?
           </h1>

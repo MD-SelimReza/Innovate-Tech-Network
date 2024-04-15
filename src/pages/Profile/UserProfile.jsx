@@ -6,8 +6,8 @@ const UserProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content">
+    <div className="hero min-h-screen bg-base-200 py-20">
+      <div className="hero-content lg:flex-row flex-col">
         <div className="card shrink-0 border h-80 w-full max-w-sm shadow-2xl bg-base-100">
           {" "}
           {user && (
