@@ -1,9 +1,14 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidUserBadge } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   return (
     <div className="bg-white px-5 py-24 text-black min-h-[calc(100vh-64px)]">
+      <Helmet>
+        <title>InnovativeTechNetwork / Contact</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="flex lg:flex-row flex-col gap-10">
         <div className="space-y-5">
           <h1 className="text-3xl font-bold mb-5 uppercase">Get in touch</h1>

@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import banner1 from "../../assets/banner-img1.jpg";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>InnovativeTechNetwork / About</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="flex lg:flex-row flex-col-reverse py-20 gap-10 items-center px-5 bg-white text-black min-h-[calc(100vh-64px)]">
         <div className="lg:w-1/2 w-full">
           <h1

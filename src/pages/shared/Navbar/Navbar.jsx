@@ -36,14 +36,14 @@ const Navbar = () => {
       >
         About Us
       </NavLink>
-      <NavLink
-        to="/estate"
+      {/* <NavLink
+        to="/estate/:id"
         className={({ isActive }) =>
           isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
         }
       >
         Estate Details
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/services"
         className={({ isActive }) =>

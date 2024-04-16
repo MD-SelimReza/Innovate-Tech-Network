@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [industrial, setIndustrial] = useState([]);
@@ -11,6 +13,10 @@ const Services = () => {
   console.log(industrial);
   return (
     <div className="text-black bg-white px-5 py-20">
+      <Helmet>
+        <title>InnovativeTechNetwork / Services</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div className="md:col-span-2">
           <div>
@@ -79,12 +85,13 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex-1">
-                <button
-                  className="py-3 w-full rounded-lg px-8 bg-[#FC8902] text-center text-white border-none mt-5"
+                <Link
+                  to={`/estate/${industry.id}`}
+                  className="btn bg-[#FC8902] text-white border-none mt-5"
                   data-aos="zoom-in-up"
                 >
                   Read More
-                </button>
+                </Link>
               </div>
             </div>
           </div>

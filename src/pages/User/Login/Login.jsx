@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import SocialLogin from "./SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -42,6 +43,10 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>InnovativeTechNetwork / Login page</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="hero-content">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div className="card-body w-96">

@@ -1,12 +1,17 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import UpdateProfile from "./UpdateProfile";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="hero min-h-screen bg-base-200 py-20">
+      <Helmet>
+        <title>InnovativeTechNetwork / User Profile</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="hero-content lg:flex-row flex-col">
         <div className="card shrink-0 border h-80 w-full max-w-sm shadow-2xl bg-base-100">
           {" "}

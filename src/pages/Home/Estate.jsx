@@ -28,12 +28,13 @@ const Estate = () => {
             perspiciatis at itaque amet magnam. Atque quaerat vel labore
             mollitia quod?
           </p>
-          <button
-            className="mt-5 bg-[#FC8902] text-white px-8 py-3 rounded-md"
+          <Link
+            to="/services"
+            className="btn mt-5 bg-[#FC8902] text-white px-8 py-3 border-none rounded-md"
             data-aos="zoom-in-up"
           >
             View All Properties
-          </button>
+          </Link>
         </div>
         {industrial.slice(0, 5).map((industry) => (
           <div key={industry.id}>
@@ -52,7 +53,7 @@ const Estate = () => {
               {industry.description}
             </p>
             <Link
-              to="/estate"
+              to={`/estate/${industry.id}`}
               className="btn bg-[#FC8902] text-white border-none mt-5"
               data-aos="zoom-in-up"
             >
@@ -61,14 +62,6 @@ const Estate = () => {
           </div>
         ))}
       </div>
-      {/* <div className="text-center">
-        <button
-          className="mt-10 bg-[#FC8902] text-white px-8 py-3 rounded-md"
-          data-aos="zoom-in-up"
-        >
-          View All Properties
-        </button>
-      </div> */}
     </div>
   );
 };
