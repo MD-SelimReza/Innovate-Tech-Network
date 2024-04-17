@@ -2,6 +2,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidUserBadge } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
 import { Helmet } from "react-helmet-async";
+import Location from "./Location";
 const Contact = () => {
   return (
     <div className="bg-white px-5 py-24 text-black min-h-[calc(100vh-64px)]">
@@ -87,6 +88,9 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="">
+        <Location />
       </div>
     </div>
   );

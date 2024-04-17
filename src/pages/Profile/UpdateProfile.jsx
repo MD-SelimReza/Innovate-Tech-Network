@@ -16,7 +16,7 @@ const UpdateProfile = () => {
   const handleProfileUpdate = (data) => {
     const { name, image } = data;
     profileUpdate(name, image).then(() => {
-      toast("Profile Update successfully");
+      toast.success("Profile Update successfully");
       navigate("/");
     });
   };

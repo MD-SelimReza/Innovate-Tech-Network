@@ -37,14 +37,14 @@ const About = () => {
             </button>
           </div>
         </div>
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 w-full">
           <h1
-            className="text-3xl font-bold mb-5 lg:hidden"
+            className="text-3xl text-center font-bold mb-5 lg:hidden"
             data-aos="fade-right"
           >
             We are InnovativeTechNetwork
           </h1>
-          <img src={banner1} alt="" data-aos="fade-down" />
+          <img src={banner1} alt="" className="mx-auto" data-aos="fade-down" />
         </div>
       </div>
     </div>
