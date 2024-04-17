@@ -35,12 +35,13 @@ const Services = () => {
               perspiciatis at itaque amet magnam. Atque quaerat vel labore
               mollitia quod?
             </p>
-            <button
+            <Link
+              to="/about"
               className="btn bg-[#FC8902] text-white border-none mt-5"
               data-aos="zoom-in-up"
             >
-              Our Services
-            </button>
+              About Us
+            </Link>
           </div>
         </div>
         <div className="bg-[#FC8902] text-white lg:order-none md:order-last p-6 rounded-lg">
@@ -51,12 +52,13 @@ const Services = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
             ad.
           </p>
-          <button
+          <Link
+            to="/contact"
             className="bg-white text-black px-9 rounded-md py-3"
             data-aos="flip-left"
           >
             Contact Now
-          </button>
+          </Link>
         </div>
         {industrial.map((industry) => (
           <div key={industry.id} className="shadow-xl rounded-md bg-gray-200">

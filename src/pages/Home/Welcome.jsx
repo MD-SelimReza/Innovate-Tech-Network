@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Welcome = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-10 my-20 px-5">
@@ -23,9 +25,13 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]" data-aos="fade-down-right">
+        <Link
+          to="/services"
+          className="text-[#FC8902]"
+          data-aos="fade-down-right"
+        >
           Read more
-        </button>
+        </Link>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -35,9 +41,13 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]" data-aos="fade-down-right">
+        <Link
+          to="/services"
+          className="text-[#FC8902]"
+          data-aos="fade-down-right"
+        >
           Read more
-        </button>
+        </Link>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -47,9 +57,13 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]" data-aos="fade-down-right">
+        <Link
+          to="/services"
+          className="text-[#FC8902]"
+          data-aos="fade-down-right"
+        >
           Read more
-        </button>
+        </Link>
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-5" data-aos="fade-down-right">
@@ -59,9 +73,13 @@ const Welcome = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
           repellendus?
         </p>
-        <button className="text-[#FC8902]" data-aos="fade-down-right">
+        <Link
+          to="/services"
+          className="text-[#FC8902]"
+          data-aos="fade-down-right"
+        >
           Read more
-        </button>
+        </Link>
       </div>
     </div>
   );

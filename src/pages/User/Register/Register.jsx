@@ -4,20 +4,21 @@ import { AuthContext } from "../../../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, profileUpdate } = useContext(AuthContext);
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleRegister = (e) => {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const name = form.get("name");
-    const email = form.get("email");
-    const password = form.get("password");
-    const photo = form.get("photo");
+  const handleRegister = (data) => {
+    const { email, password, image, fullName } = data;
 
     if (!/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{6,}$/.test(password)) {
       toast.error(
@@ -26,10 +27,11 @@ const Register = () => {
       return;
     }
 
-    createUser(email, password, name, photo).then(() => {
-      toast.success("Successfully Login");
-      e.target.reset();
-      navigate(location?.state ? location.state : "/");
+    createUser(email, password).then(() => {
+      profileUpdate(fullName, image).then(() => {
+        toast.success("Successfully register");
+        navigate(location?.state ? location.state : "/");
+      });
     });
   };
 
@@ -41,44 +43,52 @@ const Register = () => {
       </Helmet>
       <div className="hero-content">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handleRegister} className="card-body w-96">
+          <form
+            onSubmit={handleSubmit(handleRegister)}
+            className="card-body w-96"
+          >
             <h2 className="text-3xl font-bold mb-5">Create an account</h2>
             <div className="form-control">
               <input
                 type="text"
-                name="name"
-                placeholder="Username"
+                placeholder="Full name"
                 className="input input-bordered"
-                required
+                {...register("fullName", { required: true })}
               />
-            </div>
-            <div className="form-control">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                className="input input-bordered"
-                required
-              />
+              {errors.fullName && (
+                <span className="text-red-500">This field is required</span>
+              )}
             </div>
             <div className="form-control">
               <input
                 type="text"
-                name="photo"
-                placeholder="Photo URL"
+                placeholder="email"
                 className="input input-bordered"
-                required
+                {...register("email", { required: true })}
+              />
+              {errors.email && (
+                <span className="text-red-500">This field is required</span>
+              )}
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                placeholder="image url"
+                className="input input-bordered"
+                {...register("image")}
               />
             </div>
             <div className="form-control relative justify-center items-end">
               <p>
                 <input
                   type={showPassword ? "text" : "password"}
-                  name="password"
                   placeholder="Password"
                   className="input input-bordered w-80"
-                  required
+                  {...register("password", { required: true })}
                 />
+                {errors.password && (
+                  <span className="text-red-500">This field is required</span>
+                )}
               </p>
               <p
                 onClick={() => setShowPassword(!showPassword)}

@@ -34,13 +34,13 @@ const AuthProviders = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const googleSignIn = () => {
     setLoading(true);
-    signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider);
   };
 
   const githubProvider = new GithubAuthProvider();
   const githubLogIn = () => {
     setLoading(true);
-    signInWithPopup(auth, githubProvider);
+    return signInWithPopup(auth, githubProvider);
   };
 
   const profileUpdate = (name, image) => {

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import banner1 from "../../assets/banner-img1.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -28,13 +29,14 @@ const About = () => {
             vitae ratione? Quis est, modi facere rem quia voluptates assumenda
             corrupti.
           </p>
-          <div className="text-center">
-            <button
+          <div className="text-center mt-8">
+            <Link
+              to="/services"
               className="py-3 px-8 rounded-md bg-[#FC8902] text-white border-none mt-5"
               data-aos="zoom-in-up"
             >
               Our Services
-            </button>
+            </Link>
           </div>
         </div>
         <div className="lg:w-1/2 w-full">

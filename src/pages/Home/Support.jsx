@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Support = () => {
   return (
     <div
@@ -11,12 +13,13 @@ const Support = () => {
       <p className="mb-5" data-aos="fade-left" data-aos-delay="300">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad.
       </p>
-      <button
+      <Link
+        to="/contact"
         className="bg-white text-black px-9 rounded-md py-3"
         data-aos="flip-left"
       >
         Contact Now
-      </button>
+      </Link>
     </div>
   );
 };

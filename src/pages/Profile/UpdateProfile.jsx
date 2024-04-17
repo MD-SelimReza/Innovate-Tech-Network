@@ -17,6 +17,7 @@ const UpdateProfile = () => {
     const { name, image } = data;
     profileUpdate(name, image).then(() => {
       toast.success("Profile Update successfully");
+      location.reload();
       navigate("/");
     });
   };
