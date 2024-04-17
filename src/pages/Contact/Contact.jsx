@@ -49,7 +49,7 @@ const Contact = () => {
               name="message"
               id=""
               cols="30"
-              rows="10"
+              rows="5"
               placeholder="Message"
               className="bg-[#F7F7F7] p-3 rounded-md col-span-2"
             ></textarea>

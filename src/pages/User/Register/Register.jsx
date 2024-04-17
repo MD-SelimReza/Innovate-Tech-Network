@@ -1,14 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
-  const [registerError, setRegisterError] = useState("");
-  const [registerSuccess, setRegisterSuccess] = useState("");
+  const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -18,25 +19,18 @@ const Register = () => {
     const password = form.get("password");
     const photo = form.get("photo");
 
-    setRegisterError("");
-    setRegisterSuccess("");
-
     if (!/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{6,}$/.test(password)) {
-      setRegisterError(
+      toast.error(
         "Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter character."
       );
       return;
     }
 
-    createUser(email, password, name, photo)
-      .then((result) => {
-        console.log(result.user);
-        setRegisterSuccess("User created successfully.");
-        e.target.reset();
-      })
-      .catch((error) => {
-        setRegisterError(error.message);
-      });
+    createUser(email, password, name, photo).then(() => {
+      toast.success("Successfully Login");
+      e.target.reset();
+      navigate(location?.state ? location.state : "/");
+    });
   };
 
   return (
@@ -112,10 +106,6 @@ const Register = () => {
                 Login
               </Link>
             </label>
-            {registerError && <p className="text-red-700">{registerError}</p>}
-            {registerSuccess && (
-              <p className="text-blue-600">{registerSuccess}</p>
-            )}
           </form>
         </div>
       </div>

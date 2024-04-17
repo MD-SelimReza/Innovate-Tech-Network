@@ -10,7 +10,6 @@ const Services = () => {
       .then((data) => setIndustrial(data));
   }, []);
 
-  console.log(industrial);
   return (
     <div className="text-black bg-white px-5 py-20">
       <Helmet>

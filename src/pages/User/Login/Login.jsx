@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import SocialLogin from "./SocialLogin";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
-  const [loginError, setLoginError] = useState("");
-  const [loginSuccess, setLoginSuccess] = useState("");
+  const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -18,27 +18,18 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
 
-    setLoginError("");
-    setLoginSuccess("");
-
     if (!/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]{6,}$/.test(password)) {
-      setLoginError(
+      toast.error(
         "Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter character."
       );
       return;
     }
 
-    signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
-        setLoginSuccess("Successfully login");
-        e.target.reset();
-        navigate("/");
-      })
-      .then((error) => {
-        console.log(error);
-        // setLoginError(error.message);
-      });
+    signIn(email, password).then(() => {
+      toast.success("Successfully Login");
+      e.target.reset();
+      navigate(location?.state ? location.state : "/");
+    });
   };
 
   return (
@@ -92,8 +83,6 @@ const Login = () => {
                 Register
               </Link>
             </label>
-            {loginError && <p className="text-red-700">{loginError}</p>}
-            {loginSuccess && <p className="text-blue-600">{loginSuccess}</p>}
           </div>
         </div>
       </div>

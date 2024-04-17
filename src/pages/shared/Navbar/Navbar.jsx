@@ -1,22 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [logOutMessage, setLogOutMessage] = useState(false);
-  // const [userName, setUserName] = useState("");
-  // {
-  //   setUserName(user.displayName ? user.displayName : "Unknown")
-  // }
 
   const handleLogOut = () => {
-    logOut().then(() => setLogOutMessage(true));
+    logOut().then(() => toast.success("Logout Successfully"));
   };
-
-  if (logOutMessage) {
-    alert("LogOut Successfully");
-  }
 
   const navLinks = (
     <>
@@ -36,14 +28,6 @@ const Navbar = () => {
       >
         About Us
       </NavLink>
-      {/* <NavLink
-        to="/estate/:id"
-        className={({ isActive }) =>
-          isActive ? "text-[#FC8902]" : "hover:text-[#FC8902] opacity-75"
-        }
-      >
-        Estate Details
-      </NavLink> */}
       <NavLink
         to="/services"
         className={({ isActive }) =>
@@ -125,6 +109,7 @@ const Navbar = () => {
             ) : (
               <img
                 alt="Tailwind CSS Navbar component"
+                title="Unknown"
                 src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
               />
             )}

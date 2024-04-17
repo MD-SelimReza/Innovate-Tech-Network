@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
   const { profileUpdate } = useContext(AuthContext);
@@ -15,8 +16,8 @@ const UpdateProfile = () => {
   const handleProfileUpdate = (data) => {
     const { name, image } = data;
     profileUpdate(name, image).then(() => {
+      toast("Profile Update successfully");
       navigate("/");
-      alert("profile successfully updated");
     });
   };
 
@@ -31,7 +32,7 @@ const UpdateProfile = () => {
           {...register("name", { required: true })}
         />
         {errors.name && (
-          <span className="text-red-50">This field is required.</span>
+          <span className="text-red-500">This field is required.</span>
         )}
       </div>
       <div className="form-control">

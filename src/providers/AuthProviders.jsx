@@ -35,7 +35,6 @@ const AuthProviders = ({ children }) => {
   const googleSignIn = () => {
     setLoading(true);
     signInWithPopup(auth, googleProvider);
-    console.log("google provider coming soon");
   };
 
   const githubProvider = new GithubAuthProvider();
@@ -60,14 +59,11 @@ const AuthProviders = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
-      console.log("currentUser", currentUser);
     });
     return () => {
       unSubscribe();
     };
   }, []);
-
-  console.log(user);
 
   const AuthInfo = {
     user,
