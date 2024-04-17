@@ -9,7 +9,6 @@ const Estate = () => {
       .then((data) => setIndustrial(data));
   }, []);
 
-
   return (
     <div className="text-black bg-white px-5 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -18,14 +17,16 @@ const Estate = () => {
             What We Do
           </h1>
           <p className="mb-3" data-aos="fade-down">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-            culpa dolorum tempore quaerat adipisci repellendus id officiis, hic,
-            magnam quidem iusto numquam eveniet minus vel.
+            Welcome to our digital platform, where innovation meets action, and
+            possibilities are transformed into reality. We are excited to
+            introduce you to our diverse range of services and solutions,
+            designed to address your needs and exceed your expectations.
           </p>
           <p data-aos="fade-down">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-            perspiciatis at itaque amet magnam. Atque quaerat vel labore
-            mollitia quod?
+            At InnovateTechNetwork, we are passionate about making a difference
+            through what we do. From cutting-edge technology to creative
+            solutions, our mission is to empower individuals and organizations
+            to thrive in an ever-evolving world.
           </p>
           <Link
             to="/services"
@@ -45,7 +46,7 @@ const Estate = () => {
                 data-aos="flip-left"
               />
             </div>
-            <h1 className="text-2xl font-bold mb-5" data-aos="fade-up">
+            <h1 className="text-2xl font-bold my-5" data-aos="fade-up">
               {industry.estate_title}
             </h1>
             <p data-aos="fade-up" data-aos-delay="100">

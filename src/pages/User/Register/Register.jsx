@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 
 const Register = () => {
   const { createUser, profileUpdate } = useContext(AuthContext);
-  const location = useLocation();
+  const from = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const {
@@ -30,7 +30,8 @@ const Register = () => {
     createUser(email, password).then(() => {
       profileUpdate(fullName, image).then(() => {
         toast.success("Successfully register");
-        navigate(location?.state ? location.state : "/");
+        navigate(from?.state ? from.state : "/");
+        location.reload();
       });
     });
   };

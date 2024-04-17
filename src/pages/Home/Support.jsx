@@ -11,7 +11,8 @@ const Support = () => {
         Do You Need Any Help?
       </h1>
       <p className="mb-5" data-aos="fade-left" data-aos-delay="300">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad.
+        Here to assist you with any queries or tasks. Reach out for prompt and
+        personalized support from our dedicated team at InnovateTechNetwork.
       </p>
       <Link
         to="/contact"

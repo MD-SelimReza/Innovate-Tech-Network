@@ -3,7 +3,7 @@ import { BiSolidUserBadge } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsArrowsFullscreen } from "react-icons/bs";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const EstateDetails = () => {
   const properties = useLoaderData();
@@ -94,12 +94,16 @@ const EstateDetails = () => {
         <div className="bg-[#FC8902] text-white p-6 rounded-lg">
           <h1 className="text-3xl mb-5">Do You Need Any Help?</h1>
           <p className="mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-            ad.
+            Here to assist you with any queries or tasks. Reach out for prompt
+            and personalized support from our dedicated team at
+            InnovateTechNetwork.
           </p>
-          <button className="bg-white text-[#FC8902] opacity-100 px-9 rounded-md py-3">
+          <Link
+            to="/contact"
+            className="bg-white text-[#FC8902] opacity-100 px-9 rounded-md py-3"
+          >
             Contact Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

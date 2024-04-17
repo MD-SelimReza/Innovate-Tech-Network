@@ -15,19 +15,20 @@ const About = () => {
             className="text-3xl font-bold mb-5 lg:flex hidden"
             data-aos="fade-right"
           >
-            We are InnovativeTechNetwork
+            We are{" "}
+            <span className="text-[#FC8902]"> InnovativeTechNetwork</span>
           </h1>
           <p className="mb-3" data-aos="fade-right">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            facere quaerat, quisquam quae consequuntur delectus incidunt magnam
-            in animi repellendus dolore harum quidem itaque accusamus nisi saepe
-            dignissimos nesciunt exercitationem necessitatibus ullam voluptate
-            aliquam commodi.
+            Welcome to our digital platform, where innovation meets action, and
+            possibilities are transformed into reality. We are excited to
+            introduce you to our diverse range of services and solutions,
+            designed to address your needs and exceed your expectations.
           </p>
           <p className="mb-3" data-aos="fade-right">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            vitae ratione? Quis est, modi facere rem quia voluptates assumenda
-            corrupti.
+            At InnovateTechNetwork, we are passionate about making a difference
+            through what we do. From cutting-edge technology to creative
+            solutions, our mission is to empower individuals and organizations
+            to thrive in an ever-evolving world.
           </p>
           <div className="text-center mt-8">
             <Link
@@ -44,7 +45,7 @@ const About = () => {
             className="text-3xl text-center font-bold mb-5 lg:hidden"
             data-aos="fade-right"
           >
-            We are InnovativeTechNetwork
+            We are <span className="text-[#FC8902]">InnovativeTechNetwork</span>
           </h1>
           <img src={banner1} alt="" className="mx-auto" data-aos="fade-down" />
         </div>

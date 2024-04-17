@@ -23,17 +23,20 @@ const Services = () => {
               className="text-2xl font-bold mb-5 text-center"
               data-aos="fade-down"
             >
-              What We Do
+              Our Services
             </h1>
             <p className="mb-3" data-aos="fade-down">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              culpa dolorum tempore quaerat adipisci repellendus id officiis,
-              hic, magnam quidem iusto numquam eveniet minus vel.
+              At InnovateTechNetwork, we offer a comprehensive range of services
+              to meet your needs. From technology solutions and creative design
+              to strategic consulting and community engagement, we provide
+              tailored services to drive success for individuals and
+              organizations alike.
             </p>
             <p data-aos="fade-down">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-              perspiciatis at itaque amet magnam. Atque quaerat vel labore
-              mollitia quod?
+              Our services are designed with your success in mind. From
+              innovative technology solutions to personalized consulting, we are
+              dedicated to empowering you to thrive in today is dynamic
+              landscape.
             </p>
             <Link
               to="/about"
@@ -49,8 +52,9 @@ const Services = () => {
             Do You Need Any Help?
           </h1>
           <p className="mb-5" data-aos="fade-left" data-aos-delay="300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-            ad.
+            Here to assist you with any queries or tasks. Reach out for prompt
+            and personalized support from our dedicated team at
+            InnovateTechNetwork.
           </p>
           <Link
             to="/contact"

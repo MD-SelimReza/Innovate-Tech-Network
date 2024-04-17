@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner2 from "../../assets/banner-img2.jpg";
 
 const Banner2 = () => {
@@ -17,15 +18,18 @@ const Banner2 = () => {
               data-aos="fade-right"
               data-aos-delay="500"
             >
-              Hello there
+              We are <span className="text-[#FC8902]">InnovateTechNetwork</span>
             </h1>
             <p className="mb-5" data-aos="fade-right" data-aos-delay="1000">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Our website is more than just a collection of pages; it is a
+              dynamic hub of knowledge, creativity, and collaboration. Here, you
+              will find a treasure trove of resources designed to ignite your
+              passion, spark your curiosity, and propel you toward your goals.
             </p>
             <div data-aos="fade-right" data-aos-delay="1500">
-              <button className="btn btn-primary">Get Started</button>
+              <Link to="/about" className="btn btn-primary">
+                About Us
+              </Link>
             </div>
           </div>
         </div>

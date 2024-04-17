@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner1 from "../../assets/banner-img1.jpg";
 
 const Banner1 = () => {
@@ -17,15 +18,19 @@ const Banner1 = () => {
               data-aos="fade-left"
               data-aos-delay="500"
             >
-              Hello there
+              Welcome to{" "}
+              <span className="text-[#FC8902]">InnovateTechNetwork</span>
             </h1>
             <p className="mb-5" data-aos="fade-left" data-aos-delay="1000">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to our digital home, where creativity thrives, and
+              innovation knows no bounds. We are thrilled to extend a warm
+              invitation to explore our virtual space, where ideas come to life
+              and possibilities are endless.
             </p>
             <div data-aos="fade-left" data-aos-delay="1500">
-              <button className="btn btn-primary">Get Started</button>
+              <Link to="/services" className="btn btn-primary">
+                Our Services
+              </Link>
             </div>
           </div>
         </div>

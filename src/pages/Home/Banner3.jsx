@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import banner3 from "../../assets/banner-img3.jpg";
 
 const Banner3 = () => {
   return (
     <div>
-      {/* <img src={banner3} alt="" /> */}
       <div
         className="hero min-h-[calc(100vh-70px)]"
         style={{
@@ -18,7 +18,8 @@ const Banner3 = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              Hello there
+              Take Solution with{" "}
+              <span className="text-[#FC8902]">InnovateTechNetwork</span>
             </h1>
             <p className="mb-5" data-aos="fade-up" data-aos-delay="1000">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
@@ -26,7 +27,9 @@ const Banner3 = () => {
               et a id nisi.
             </p>
             <div data-aos="fade-up" data-aos-delay="1500">
-              <button className="btn btn-primary">Get Started</button>
+              <Link to="/contact" className="btn btn-primary">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

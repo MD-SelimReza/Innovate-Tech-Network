@@ -10,8 +10,9 @@ const Footer = () => {
             InnovateTechNetwork
           </h6>
           <p className="text-white opacity-60">
-            There are many variations of passages of Lorem Ipsum available, but
-            majority have suffered alteration in some form.
+            Explore the latest in tech trends and innovations at
+            InnovateTechNetwork. Stay informed and inspired with our curated
+            content and expert insights.
           </p>
           <p className="footer-title text-[#FFFFFF] opacity-100">Follow Us</p>
           <div className="flex lg:justify-normal md:justify-normal justify-center gap-5">

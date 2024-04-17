@@ -14,8 +14,9 @@ const Contact = () => {
         <div className="space-y-5">
           <h1 className="text-3xl font-bold mb-5 uppercase">Get in touch</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            praesentium atque id commodi minima et!
+            Ready to get started? Contact us today to explore how our services
+            can benefit you. Our team is standing by, eager to assist you on
+            your journey to success.
           </p>
           <div className="grid grid-cols-2 gap-10">
             <input
